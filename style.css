@@ -1,66 +1,123 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #000;
+margin: 0;
+font-family: Arial, sans-serif;
+background: #fff;
+color: #000;
 }
 
 nav {
-  background: #000;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+background: #000;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
 }
 
-nav h1 {
-  color: #A0576E;
+nav .logo img {
+height: 50px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
+.nav-links {
+list-style: none;
+display: flex;
+gap: 1.5rem;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
+.nav-links li a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+
+.nav-links li a:hover {
+color: #A0576E;
+}
+
+.hero {
+text-align: center;
+padding: 2rem;
+}
+
+.hero .slideshow img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0 auto 1rem;
+}
+
+.hero h1 {
+font-size: 2rem;
+color: #A0576E;
+}
+
+.order-btn {
+background: #A0576E;
+color: #fff;
+padding: 0.75rem 1.5rem;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+}
+
+.order-btn:hover {
+background: #000;
 }
 
 section {
-  padding: 40px 20px;
-}
-
-#slideshow img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
+padding: 2rem;
+max-width: 1000px;
+margin: 0 auto;
 }
 
 .menu-item {
-  margin: 20px 0;
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-bottom: 1.5rem;
 }
 
 .menu-item img {
-  max-width: 300px;
-  display: block;
+width: 120px;
+height: auto;
+border-radius: 8px;
+}
+
+.menu-item h3 {
+margin: 0;
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+max-width: 400px;
 }
 
 form input,
 form textarea {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  max-width: 400px;
+padding: 0.75rem;
+border: 1px solid #ccc;
+border-radius: 4px;
 }
 
-button {
-  background: #A0576E;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+form button {
+background: #A0576E;
+color: #fff;
+border: none;
+padding: 0.75rem;
+border-radius: 5px;
+font-weight: bold;
 }
+
+form button:hover {
+background: #000;
+}
+
+.map iframe {
+width: 100%;
+border: 0;
+margin-top: 1rem;
+}
+
+
