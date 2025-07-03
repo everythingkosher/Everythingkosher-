@@ -74,6 +74,8 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <p>We'd love to hear from you! Send us a message below:</p>
+    <button id="showContact">Show Contact Form</button>
+    <div id="contactForm" style="display: none;">
     <form>
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
@@ -85,6 +87,16 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
+<script>
+  document.getElementById('showContact').addEventListener('click', function() {
+    var form = document.getElementById('contactForm');
+    if (form.style.display === 'none') {
+      form.style.display = 'block';
+    } else {
+      form.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
