@@ -1,55 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Everything Kosher</title>
-    <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Everything Kosher</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Everything Kosher</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#hours">Hours</a></li>
-                <li><a href="#location">Location</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="https://everythingkosherfood.square.site/?shipping=true#most-popular" target="_blank">Order</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home">
-        <h1>Welcome to Everything Kosher</h1>
-        <p>Taste and Quality Is Our Priority</p>
-    </section>
-    <section id="menu">
-        <h2>Menu</h2>
-        <p>Check out our delicious kosher offerings!</p>
-    </section>
-    <section id="hours">
-        <h2>Hours</h2>
-        <p>Open daily: 10AM - 8PM</p>
-    </section>
-    <section id="location">
-        <h2>Our Location</h2>
-        <p>498 Red Apple Ct, Located in Levi’s parking lot, Central Valley, NY</p>
-        <iframe src="https://www.google.com/maps?q=498+Red+Apple+Ct,+Central+Valley,+NY&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <p>Read what our happy customers have to say!</p>
-        <a href="https://www.google.com/search?q=Everything+Kosher+Reviews" target="_blank" class="button">Read Reviews</a>
-    </section>
-    <section id="story">
-        <h2>Our Story</h2>
-        <p>Coming soon! Stay tuned for our journey.</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Everything Kosher. All rights reserved.</p>
-    </footer>
+  <!-- Navigation -->
+  <nav>
+    <h1>Everything Kosher</h1>
+    <ul>
+      <li><a href="#slideshow">Home</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://everythingkosherfood.square.site/" target="_blank">Order</a></li>
+    </ul>
+  </nav>
+
+  <!-- Slideshow -->
+  <section id="slideshow">
+    <img src="images/logo-secondary.png" alt="Secondary Logo" class="slide" />
+    <img src="images/picnic.jpg" alt="Picnic Spread" class="slide" />
+    <img src="images/table.jpg" alt="Table Set" class="slide" />
+    <img src="images/dishes.jpg" alt="Delicious Dishes" class="slide" />
+  </section>
+
+  <!-- Story -->
+  <section id="story">
+    <h2>Our Story</h2>
+    <p>At Everything Kosher, tradition and taste are our priority. Our family-run kitchen prepares every dish with the care and authenticity you love, serving the community with warmth and quality ingredients. From fresh bagels to gourmet spreads, we believe every bite should feel like home. Taste and Quality Is Our Priority.</p>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu">
+    <h2>Menu Highlights</h2>
+    <p>Check out our full menu and delicious options on our <a href="https://everythingkosherfood.square.site/" target="_blank">Square site</a>.</p>
+    <!-- Example item -->
+    <div class="menu-item">
+      <img src="images/bagel.jpg" alt="Bagel Sandwich">
+      <h3>Bagel Sandwich</h3>
+      <p>Fresh bagel with your choice of fillings. Taste the difference!</p>
+    </div>
+    <!-- Add more items with images here -->
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>"Delicious food and warm service — our new favorite spot!"</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p><a href="[YOUR_GOOGLE_REVIEW_LINK]" target="_blank">Leave us a review!</a></p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Visit us at: 123 Kosher Street, Brooklyn, NY</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023..."
+      width="400"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    // Simple slideshow script
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+    setInterval(() => {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+      index = (index + 1) % slides.length;
+    }, 3000);
+  </script>
 </body>
 </html>
