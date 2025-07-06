@@ -11,7 +11,8 @@
  <section id="menu">
     <h2>Our Menu</h2>
     <button id="ShowBreakfast">Breakfast</button>
-    <div id="breakfast-item">
+   
+    <div id="breakfast-item" "display: none;">
     <div class="menu-item">
       <img src="images/menu-item1.jpg" alt="Menu Item 1">
       <h3>Bagel with Lox</h3>
@@ -22,4 +23,16 @@
     </div>
     <!-- Add more items here -->
   </section> 
+ <script>
+  document.getElementById("showBreakfast").addEventListener("click", function() {
+    var menu = document.getElementById("breakfastMenu");
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+  });
+</script>
+ 
 </body>
+</html>
