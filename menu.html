@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Everything Kosher - Fresh, delicious kosher food made with love.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Everything Kosher – Fresh, delicious kosher food made with love.">
   <title>Everything Kosher</title>
-  <link rel="stylesheet href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <section id="menu">
+  <section id="menu">
     <h2>Our Menu</h2>
-    <button id="ShowBreakfast">Breakfast</button>
-   
-    <div id="breakfast-item" "display: none;">
-    <div class="menu-item">
-      <img src="images/menu-item1.jpg" alt="Menu Item 1">
-      <h3>Bagel with Lox</h3>
+    <button id="showBreakfast">Breakfast</button>
+    <div id="breakfast-item" style="display: none;">
+      <div class="menu-item">
+        <img src="images/menu-item1.jpg" alt="Bagel with Lox">
+        <h3>Bagel with Lox</h3>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu-item2.jpg" alt="Tuna Salad Sandwich">
+        <h3>Tuna Salad Sandwich</h3>
+      </div>
+      <!-- Add more menu items here -->
     </div>
-    <div class="menu-item">
-      <img src="images/menu-item2.jpg" alt="Menu Item 2">
-      <h3>Tuna Salad Sandwich</h3>
-    </div>
-    <!-- Add more items here -->
-  </section> 
- <script>
-  document.getElementById("showBreakfast").addEventListener("click", function() {
-    var menu = document.getElementById("breakfastMenu");
-    if (menu.style.display === "none") {
-      menu.style.display = "block";
-    } else {
-      menu.style.display = "none";
-    }
-  });
-</script>
- 
+  </section>
+
+  <script>
+    document.getElementById("showBreakfast").addEventListener("click", function() {
+      var menu = document.getElementById("breakfast-item");
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
