@@ -173,3 +173,27 @@ button:hover {
   display: none;  /* Hide all menu item sections initially */
 }
 
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.menu-buttons button {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-buttons button:hover {
+  background-color: #f2f2f2;
+}
+
