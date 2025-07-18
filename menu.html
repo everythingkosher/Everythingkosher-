@@ -6,12 +6,61 @@
   <meta name="description" content="Everything Kosher – Fresh, delicious kosher food made with love.">
   <title>Everything Kosher</title>
   <link rel="stylesheet" href="style.css" />
+ .menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.menu-item {
+  width: 200px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+  transform: scale(1.05);
+}
+
+.menu-item h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+  button {
+  background-color: #4CAF50; /* green */
+  color: white;
+  padding: 12px 24px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
 </head>
 <body>
   <section id="menu">
     <h2>Our Menu</h2>
     <button id="showBreakfast">Breakfast</button>
-    <div id="breakfast-item" style="display: none;">
+    <div id="breakfast-item" class="menu-section grid hidden">
       <div class="menu-item">
         <img src="images/Cream cheese and lox sandwich.PNG" alt="Bagel with Lox">
         <h3>Bagel with Lox</h3>
@@ -50,8 +99,8 @@
       </div>
     </div>
    
-    <button id="showBrunch plates">Brunch Plates</button>
-    <div id="Brunch-Plates-item" style="display: none;">
+    <button id="showBrunchplates">Brunch Plates</button>
+    <div id="Brunch-Plates-item" class="menu-section grid hidden">
       <div class="menu-item">
         <img src="images/Eggplant parmesan.PNG" alt="Eggplant Parmesan">
         <h3>Eggplant Parmesan</h3>
@@ -82,7 +131,7 @@
       </div>
     </div>
     <button id="Desserts">Desserts</button>
-    <div id="Desserts" style="display: none;"> 
+    <div id="Desserts" class="menu-section grid hidden"> 
       <div class="menu-item">
         <img src="images/Real carrot muffin.PNG" alt="Real Carrot Muffin">
         <h3>Real Carrot Muffin</h3>
@@ -132,14 +181,27 @@
   </section>
 
   <script>
-    document.getElementById("showBreakfast").addEventListener("click", function() {
-      var menu = document.getElementById("breakfast-item");
-      if (menu.style.display === "none") {
-        menu.style.display = "block";
-      } else {
-        menu.style.display = "none";
-      }
+  const sections = [
+    { button: "showBreakfast", content: "breakfast-item" },
+    { button: "showBrunchPlates", content: "brunch-plates-item" },
+    { button: "showDesserts", content: "desserts-item" }
+  ];
+
+  sections.forEach(({ button, content }) => {
+    document.getElementById(button).addEventListener("click", function () {
+      const section = document.getElementById(content);
+      const isVisible = section.style.display === "block";
+
+      // Hide all sections
+      sections.forEach(({ content }) => {
+        document.getElementById(content).style.display = "none";
+      });
+
+      // Show clicked one (if it wasn’t already visible)
+      section.style.display = isVisible ? "none" : "block";
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
