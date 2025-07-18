@@ -168,3 +168,7 @@ button:hover {
   background-color: #45a049;
   transform: scale(1.05);
 }
+
+.menu-section {
+  display: none;  /* Hide all menu item sections initially */
+}
