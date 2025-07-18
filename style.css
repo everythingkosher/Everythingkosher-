@@ -172,3 +172,17 @@ button:hover {
 .menu-section {
   display: none;  /* Hide all menu item sections initially */
 }
+
+.menu-section.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 20px;
+}
+
+/* For small screens like phones */
+@media (max-width: 600px) {
+  .menu-section.grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on phones */
+  }
+}
+
